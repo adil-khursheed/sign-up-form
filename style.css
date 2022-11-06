@@ -44,14 +44,14 @@ body{
 }
 
 .text-col .heading{
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
     line-height: 1.125;
     margin-bottom: 2rem;
     color: #fff;
 }
 
 .text-col .para{
-    font-size: 0.8rem;
+    font-size: clamp(0.7rem, 3vw, 0.8rem);
     color: #fff;
 }
 
@@ -168,4 +168,32 @@ input::placeholder{
 }
 .attribution a { 
     color: var(--dark-blue); 
+}
+
+
+@media only screen and (max-width: 750px){
+
+    .main-container{
+        max-width: 600px;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .text-col,
+    .input-col{
+        width: 100%;
+    }
+
+    .text-col .heading,
+    .text-col .para{
+        text-align: center;
+    }
+
+    .text-col .heading{
+        margin-bottom: 1rem;
+    }
+
+    form{
+        padding: 1.5rem;
+    }
 }
